@@ -1,3 +1,4 @@
+//RGB to HEX
 function rgbToHex(r, g, b) {
   let hexVersion = "";
   for (let i = 0; i < arguments.length; i++) {
@@ -19,5 +20,27 @@ function numbersToLetters(number) {
   } else return number;
 }
 
-let colorInHex = rgbToHex(300, 100, 220);
+let colorInHex = rgbToHex(200, 100, 220);
 console.log(colorInHex);
+
+//HEX to RGB
+function hexToRgb(hexstring) {
+  if (hexstring.charAt(0) === "#") {
+    let red = lettersToNumbers(hexstring.charAt(1)) * 16 + lettersToNumbers(hexstring.charAt(2));
+    let green = lettersToNumbers(hexstring.charAt(3)) * 16 + lettersToNumbers(hexstring.charAt(4));
+    let blue = lettersToNumbers(hexstring.charAt(5)) * 16 + lettersToNumbers(hexstring.charAt(6));
+    console.log(red, green, blue);
+  } else {
+    console.log("hex number should start with a #");
+  }
+}
+
+function lettersToNumbers(character) {
+  let number = character.toUpperCase().charCodeAt(0);
+  if (number > 64) {
+    return number - 55;
+  } else return Number(character);
+}
+
+let colorInRgb = hexToRgb("#C864DC");
+console.log(colorInRgb);
