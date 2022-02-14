@@ -44,3 +44,13 @@ function lettersToNumbers(character) {
 
 let colorInRgb = hexToRgb("#C864DC");
 console.log(colorInRgb);
+
+//CSS to RGB
+function cssToRgb(cssString) {
+  let red = parseInt(cssString.substring(cssString.indexOf("(") + 1, cssString.indexOf(",")));
+  let green = parseInt(cssString.substring(cssString.indexOf(",") + 2, cssString.lastIndexOf(",")));
+  let blue = parseInt(cssString.substring(cssString.lastIndexOf(",") + 2, cssString.indexOf(")")));
+  console.log(red, green, blue);
+}
+
+cssToRgb("rgb(220, 100, 200)");
