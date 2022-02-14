@@ -1,6 +1,9 @@
-let str = "PEtER";
-document.getElementById("before").textContent = str;
-document.getElementById("after").textContent =
-  str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
+function capitalize(string) {
+  document.getElementById("before").textContent = string;
+  string = string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
+  document.getElementById("after").textContent = string;
+  console.log(string);
+}
 
-functio;
+capitalize("PEtER");
+capitalize("PEter");
