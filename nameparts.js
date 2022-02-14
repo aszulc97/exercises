@@ -1,11 +1,11 @@
 let str = "Albus Percival Wulfric Brian Dumbledore";
-document.getElementById("before").textContent = str;
-document.getElementById("firstname").textContent = str.substring(0, str.indexOf(" "));
-document.getElementById("middlename").textContent = str.substring(
-  str.indexOf(" ") + 1,
-  str.lastIndexOf(" ")
-);
-document.getElementById("lastname").textContent = str.substring(
-  str.lastIndexOf(" ") + 1,
-  str.length
-);
+str = "Agata Szulc";
+
+function getNameParts(fullname) {
+  let firstname = fullname.substring(0, fullname.indexOf(" "));
+  let middlename = fullname.substring(fullname.indexOf(" ") + 1, fullname.lastIndexOf(" "));
+  let lastname = fullname.substring(fullname.lastIndexOf(" ") + 1, fullname.length);
+  console.log({ firstname, middlename, lastname });
+}
+
+getNameParts(str);
