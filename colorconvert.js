@@ -48,8 +48,8 @@ console.log(colorInRgb);
 //CSS to RGB
 function cssToRgb(cssString) {
   let red = parseInt(cssString.substring(cssString.indexOf("(") + 1, cssString.indexOf(",")));
-  let green = parseInt(cssString.substring(cssString.indexOf(",") + 2, cssString.lastIndexOf(",")));
-  let blue = parseInt(cssString.substring(cssString.lastIndexOf(",") + 2, cssString.indexOf(")")));
+  let green = parseInt(cssString.substring(cssString.indexOf(",") + 1, cssString.lastIndexOf(",")).trim());
+  let blue = parseInt(cssString.substring(cssString.lastIndexOf(",") + 1, cssString.indexOf(")")).trim());
   console.log(red, green, blue);
 }
 
