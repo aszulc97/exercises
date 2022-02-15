@@ -1,9 +1,9 @@
 function capitalize(string) {
-  document.getElementById("before").textContent = string;
+  //document.getElementById("before").textContent = string;
   string = string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
-  document.getElementById("after").textContent = string;
-  console.log(string);
+  //document.getElementById("after").textContent = string;
+  return string;
 }
 
-capitalize("PEtER");
-capitalize("PEter");
+let answer = capitalize("petER");
+console.log(answer);

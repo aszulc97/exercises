@@ -17,9 +17,11 @@ function fullName(lastname, firstname, middlename) {
   } else {
     fullnameString = firstname + " " + lastname;
   }
-  console.log(fullnameString);
+  return fullnameString;
 }
 
-fullName("Potter", "Harry", "James");
-fullName("Potter", "Harry");
-fullName("Potter", "Harry", "James", "Pottypotpot");
+//let answer = fullName("Potter", "Harry", "James", "Pottypotpot");
+let answer = fullName("Szulc", "Agata");
+console.log(answer);
+// fullName("Potter", "Harry");
+// fullName("Potter", "Harry", "James", "Pottypotpot");
